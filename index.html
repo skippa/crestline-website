@@ -1,317 +1,252 @@
 <!doctype html>
 <html lang="en">
 <head>
- <meta charset="utf-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1" />
- <meta name="description" content="Independent advisory exclusively for rental, construction and mining fleets deploying battery and hybrid temporary power systems." />
- <title>Crestline Partners | Practical clarity for complex problems</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crestline Partners — Advisory</title>
 
- <!--
- Brand cues drawn from your current deck:
- - restrained, high-contrast layout
- - strong typography
- - yellow accent
- -->
+  <!-- Favicons / app icons -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="assets/site.webmanifest">
 
- <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#0b0c0e" />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
- <header class="topbar">
- <div class="wrap topbar-inner">
- <a class="brand" href="#top" aria-label="Crestline Partners home">
- <b>Crestline Partners</b>
- <span>Advisory</span>
- </a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
- <nav aria-label="Primary navigation">
- <a href="#reality">Deployment Reality</a>
- <a href="#work">Work</a>
- <a href="#leadership">Leadership</a>
- <a href="#contact">Contact</a>
- </nav>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Crestline Partners home">
+        <img class="brand__logo" src="assets/crestline-logo-horizontal.png" alt="Crestline Partners" />
+      </a>
 
- <a class="cta" href="#contact">Contact</a>
- </div>
- </header>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#deployment-reality">Deployment Reality</a>
+        <a href="#work">Work</a>
+        <a href="#leadership">Leadership</a>
+      </nav>
 
- <main id="top">
- <!-- HERO -->
- <section class="hero">
- <div class="wrap">
- <div class="kicker"><span class="dot"></span> Exclusively for rental, construction and mining fleets</div>
- <h1>Battery and hybrid temporary power systems, specified for reality.</h1>
- <p class="subhead">Crestline ensures renewable integration is commercially sound before fleets scale.</p>
+      <a class="btn btn--primary btn--nav" href="#contact">Contact</a>
+    </div>
+  </header>
 
- <div class="hero-actions">
- <a class="cta" href="#contact">Start</a>
- <a class="ghost" href="#work">How we work</a>
- </div>
+  <main id="main">
+    <!-- HERO -->
+    <section id="top" class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
 
- <div class="rule"></div>
+      <div class="container hero__inner">
+        <p class="eyebrow">EXCLUSIVELY FOR RENTAL, CONSTRUCTION AND MINING FLEETS</p>
 
- <div class="grid" aria-label="Highlights">
-  <div class="card card--span4">
-    <h3>Specification</h3>
-    <p>Control architecture defined before capital is committed. 
-      Systems are structured for operability, not just performance claims.</p>
-  </div>
-  <div class="card card--span4">
-    <h3>Commercial fit</h3>
-    <p>Assets that rent — without creating support drag. 
-      Deployment decisions grounded in utilisation, service burden, and fleet reality.</p>
-  </div>
-  <div class="card card--span4">
-    <h3>Field assurance</h3>
-    <p>Performance verified under real site conditions. 
-      Hybrid systems are validated in operation — not just on paper.</p>
-  </div>
- </div>
- </div>
- </section>
+        <h1 class="hero__title">Battery and hybrid temporary power systems, specified for reality.</h1>
+        <p class="hero__subhead">Crestline ensures new categories earn their keep before scale.</p>
 
- <!-- DEPLOYMENT REALITY -->
- <section class="section" id="reality">
- <div class="wrap">
- <h2>Deployment Reality</h2>
- <p class="lead">
- Most deployment failures don’t begin in hardware. They begin in assumptions — about control logic,
- utilisation, integration responsibility, and field readiness. What performs in pilot conditions often
- breaks under fleet scale.
- </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#contact">Start</a>
+          <a class="btn btn--ghost" href="#work">How we work</a>
+        </div>
 
- <div class="two-col">
- <div class="card card--white">
- <div class="pill"><i></i> What gets protected</div>
- <ul class="clean">
- <li><span class="tick"></span><span>Decisions that can be defended.</span></li>
- <li><span class="tick"></span><span>Fleet utilisation and operability.</span></li>
- <li><span class="tick"></span><span>Support burden, spares, and field reliability.</span></li>
- </ul>
- </div>
+        <div class="pill-row" role="list">
+          <div class="pill" role="listitem">
+            <div class="pill__kicker">SPECIFICATION</div>
+            <div class="pill__body">Controls, integration, and operability — before procurement.</div>
+          </div>
+          <div class="pill" role="listitem">
+            <div class="pill__kicker">COMMERCIAL FIT</div>
+            <div class="pill__body">Clear framing that aligns sales, service, and ops.</div>
+          </div>
+          <div class="pill" role="listitem">
+            <div class="pill__kicker">FIELD ASSURANCE</div>
+            <div class="pill__body">Practical checks during delivery so performance matches intent.</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
- <div class="quote">
- <b>Where systems lose alignment</b>
- <span>
- Controls, commercial framing, and site behaviour drift apart.
- The result is under‑utilised assets, support blowouts, and slow loss of confidence inside the fleet.
- </span>
- </div>
- </div>
+    <!-- DEPLOYMENT REALITY -->
+    <section id="deployment-reality" class="section section--alt">
+      <div class="container">
+        <h2>Deployment Reality</h2>
+        <p class="lede">
+          Most deployment failures don’t begin in hardware. They begin in assumptions — about control logic,
+          utilisation, integration responsibility, and field readiness. What performs in pilot conditions often
+          breaks under fleet scale.
+        </p>
 
- <div class="grid grid--tight" aria-label="Alignment breakdown patterns">
- <div class="card card--span4">
- <h3>Utilisation mismatch</h3>
- <p>Load profiles, duty cycles, and operator habits aren’t reflected in the design intent.</p>
- </div>
- <div class="card card--span4">
- <h3>Integration ambiguity</h3>
- <p>No single owner for controls behaviour, change control, or boundary responsibilities.</p>
- </div>
- <div class="card card--span4">
- <h3>Support readiness gap</h3>
- <p>Spares, diagnostics, training, and escalation paths arrive after the first failure.</p>
- </div>
- </div>
+        <div class="card card--wide">
+          <div class="card__kicker">WHAT GETS PROTECTED</div>
+          <ul class="checklist">
+            <li>Decisions that can be defended.</li>
+            <li>Fleet utilisation and operability.</li>
+            <li>Support burden, spares, and field reliability.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
- </div>
- </section>
+    <!-- HOW WE WORK -->
+    <section id="work" class="section">
+      <div class="container">
+        <h2>How Crestline works</h2>
+        <p class="lede">Engagements are structured. The aim is simple: reduce stranded assets while improving utilisation.</p>
 
- <!-- WORK -->
- <section class="section" id="work">
- <div class="wrap">
- <h2>Work</h2>
- <p class="lead">
- Engagements are structured. The aim is simple: reduce stranded assets while improving utilisation.
- </p>
+        <div class="grid grid--2">
+          <div class="card">
+            <div class="card__kicker">FILTER</div>
+            <p>Identify where a new category can win, and where it will quietly fail.</p>
+          </div>
+          <div class="card">
+            <div class="card__kicker">SPECIFY</div>
+            <p>Define requirements that align OEMs, integrators, and fleet teams.</p>
+          </div>
+          <div class="card">
+            <div class="card__kicker">VALIDATE</div>
+            <p>Design pilots with success measures that translate to procurement.</p>
+          </div>
+          <div class="card">
+            <div class="card__kicker">ASSURE</div>
+            <p>Review delivery and early performance to stop avoidable support blowouts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
- <div class="grid">
- <div class="card card--span6">
- <h3>Filter</h3>
- <p>Identify where a new category can win, and where it will quietly fail.</p>
- </div>
- <div class="card card--span6">
- <h3>Specify</h3>
- <p>Define requirements that align OEMs, integrators, and fleet teams.</p>
- </div>
- <div class="card card--span6">
- <h3>Validate</h3>
- <p>Design pilots with success measures that translate to procurement.</p>
- </div>
- <div class="card card--span6">
- <h3>Assure</h3>
- <p>Review delivery and early performance to stop avoidable support blowouts.</p>
- </div>
- </div>
- </div>
- </section>
+    <!-- SELECTED INITIATIVES -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2>Selected initiatives</h2>
+        <p class="lede">Selected engagements demonstrating Crestline’s work at control, commercial, and fleet-deployment level.</p>
 
- <!-- INITIATIVES -->
- <section class="section" id="initiatives">
- <div class="wrap">
- <h2>Selected initiatives</h2>
- <p class="lead">
-  Selected engagements demonstrating Crestline’s work at control, commercial, and fleet-deployment level.
- </p>
+        <div class="grid grid--3">
+          <article class="card card--tall">
+            <h3 class="card__title">CONTROL-LAYER HYBRID STABILITY (DGD)</h3>
+            <p>Architecture developed within OEM functional specification work to prevent generator–battery instability under real rental conditions.</p>
+            <p>Addresses charge overload, degraded genset response, and variable operator behaviour — reducing silent failure cascades before fleet scale.</p>
+            <p>Currently in structured development discussion with OEM partners toward firmware-level implementation.</p>
+          </article>
 
- <div class="grid">
- <div class="card card--span4 card--white">
-  <h3>Control-Layer Hybrid Stability (DGD)</h3>
+          <article class="card card--tall">
+            <h3 class="card__title">DISTRIBUTED SITE HYBRID ARCHITECTURE</h3>
+            <p>Commercial and technical model developed for contractors facing decarbonisation mandates under strict cost constraints.</p>
+            <p>Combines solar, battery, and behavioural load management to deliver emissions reduction without premium site cost.</p>
+            <p>Structured for deployment within rental and construction fleet realities.</p>
+          </article>
 
-    <p>
-      Architecture developed within OEM functional specification work to prevent generator–battery instability under real rental conditions.
-    </p>
+          <article class="card card--tall">
+            <h3 class="card__title">OEM SPECIFICATION AND ARCHITECTURE DEVELOPMENT</h3>
+            <p>Functional specification and full-system architecture development for rental-grade BESS and hybrid platforms.</p>
+            <p>Developed as part of a 60 kW / 120 kWh rental-grade BESS platform architecture — defining mechanical, electrical, control, thermal and economic design constraints from first principles.</p>
+            <p>Enabled OEM to build proprietary products rather than rebrand imports, grounded in field reliability, IP control, and real deployment conditions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <p>
-      Addresses charge overload, degraded genset response, and variable operator behaviour — reducing silent failure cascades before fleet scale.
-    </p>
+    <!-- LEADERSHIP -->
+    <section id="leadership" class="section">
+      <div class="container">
+        <h2>Leadership</h2>
 
-    <p>
-      Currently in structured development discussion with OEM partners toward firmware-level implementation.
-    </p>
+        <div class="grid grid--2 grid--leadership">
+          <div class="card card--tall">
+            <div class="card__kicker">CRAIG SKIPSEY</div>
+            <div class="muted">Managing Partner</div>
 
- </div>
- 
- <div class="card card--span4 card--white">
-    <h3>Distributed Site Hybrid Architecture</h3>
-    <p>Commercial and technical model developed for contractors facing decarbonisation mandates under strict cost constraints. </p>
+            <p>Craig works at the intersection of economics, technology and on-site operations — helping fleet operators make investment decisions that withstand scrutiny.</p>
+            <p>Experience spans hybrid and battery deployments, system architecture, functional specification, and commercial pilot development across the rental, construction and mining context.</p>
 
-    <p>Combines solar, battery, and behavioural load management to deliver emissions reduction without premium site cost.</p>
+            <p class="tagline">Practical clarity for complex problems.</p>
+          </div>
 
-    <p>Structured for deployment within rental and construction fleet realities.</p>
- 
-  </div>
+          <div class="card card--tall">
+            <div class="badge">
+              <span class="badge__dot" aria-hidden="true"></span>
+              <span class="badge__text">COLLABORATION MODEL</span>
+            </div>
+            <p>Crestline collaborates with specialist engineering and controls partners where required — while remaining independent in recommendations and decision framing.</p>
 
- <div class="card card--span4 card--white">
-    <h3>OEM specification and Architecture Development</h3>
-    <p>Functional specification and full-system architecture development for rental-grade BESS and hybrid platforms.</p>
+            <hr class="rule" />
 
-    <p>Developed as part of a 60 kW / 120 kWh rental-grade BESS platform architecture — defining mechanical, electrical, control, thermal and economic design constraints from first principles. </p>
+            <div class="badge">
+              <span class="badge__dot" aria-hidden="true"></span>
+              <span class="badge__text">TYPICAL TRIGGERS</span>
+            </div>
+            <ul class="checklist">
+              <li>Capital decisions approaching procurement or tender.</li>
+              <li>Pilot design before scaling a fleet category.</li>
+              <li>Board or exec scrutiny on ROI, utilisation and support burden.</li>
+              <li>Deployment complexity increasing beyond internal capability.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <p>Structured to enable proprietary product development, grounded in field reliability, IP control, and real deployment conditions.</p>
- </div>
+    <!-- CONTACT -->
+    <section id="contact" class="section section--alt section--contact">
+      <div class="container">
+        <h2>Start a conversation</h2>
+        <p class="lede">If a decision needs to be defensible — commercially and technically — reach out. You’ll get a considered reply (not a sales funnel).</p>
 
- </div>
+        <div class="grid grid--2 grid--contact">
+          <form class="card form" name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
 
- </div>
+            <label class="field">
+              <span class="field__label">NAME</span>
+              <input class="field__input" type="text" name="name" autocomplete="name" />
+            </label>
 
- </section>
+            <label class="field">
+              <span class="field__label">COMPANY</span>
+              <input class="field__input" type="text" name="company" autocomplete="organization" />
+            </label>
 
- <!-- LEADERSHIP -->
- <section class="section" id="leadership">
- <div class="wrap">
- <h2>Leadership</h2>
- <div class="two-col">
- <div class="card card--white">
- <h3 class="h3-tight">Craig Skipsey</h3>
- <p class="role">
- Managing Partner
- </p>
- <p class="lead lead--tight">
- Craig works at the intersection of economics, technology and on-site operations — helping fleet operators make investment decisions that withstand scrutiny.
- </p>
- <p class="lead">
- His work spans hybrid and battery deployments, system architecture, functional specification, and commercial pilot development within rental, construction and mining environments.
- </p>
- <p class="lead lead--tight-bottom">
- <b class="tagline">Practical clarity for complex problems.</b>
- </p>
- </div>
+            <label class="field">
+              <span class="field__label">EMAIL</span>
+              <input class="field__input" type="email" name="email" autocomplete="email" required />
+            </label>
 
- <div class="card">
- <div class="pill"><i></i> Collaboration model</div>
- <p class="p-small">
- Crestline collaborates with specialist engineering and controls partners where required — while remaining independent in recommendations and decision-making.
- </p>
+            <label class="field">
+              <span class="field__label">MESSAGE</span>
+              <textarea class="field__input field__input--area" name="message" rows="6" placeholder="A few lines is enough — context, what decision is coming, and what you want to de-risk."></textarea>
+            </label>
 
- <div class="rule"></div>
+            <button class="btn btn--primary btn--full" type="submit">Send</button>
 
- <div class="pill"><i></i> Typical triggers</div>
- <ul class="clean">
- <li><span class="tick"></span><span>Capital decisions approaching procurement or tender.</span></li>
- <li><span class="tick"></span><span>Pilot design prior to fleet-wide rollout.</span></li>
- <li><span class="tick"></span><span>Board or exec scrutiny on ROI, utilisation and support burden.</span></li>
- <li><span class="tick"></span><span>Deployment complexity exceeding internal capability.</span></li>
- </ul>
- </div>
- </div>
- </div>
- </section>
+            <div class="form__hint">Prefer email? <a href="mailto:craig@crestlinepartners.net">craig@crestlinepartners.net</a></div>
+          </form>
 
- <!-- CONTACT -->
- <section class="section" id="contact">
- <div class="wrap">
- <h2>Start a conversation</h2>
- <p class="lead">
- If a decision needs to be defensible — commercially and technically — reach out.
- You’ll get a considered reply (not a sales funnel).
- </p>
+          <aside class="card card--tall">
+            <div class="badge">
+              <span class="badge__dot" aria-hidden="true"></span>
+              <span class="badge__text">GOOD FIT</span>
+            </div>
+            <ul class="checklist">
+              <li>Battery, hybrid and controls decisions that must be defensible.</li>
+              <li>Engaged before and during rollout — not crisis clean-up.</li>
+            </ul>
 
- <div class="two-col">
- <div class="card card--white">
- <!-- Netlify forms: works when deployed on Netlify -->
- <form class="form" name="crestline-contact" method="POST" data-netlify="true">
- <input type="hidden" name="form-name" value="crestline-contact" />
- <div>
- <label for="name">Name</label>
- <input id="name" name="name" autocomplete="name" required />
- </div>
- <div>
- <label for="company">Company</label>
- <input id="company" name="company" autocomplete="organization" />
- </div>
- <div>
- <label for="email">Email</label>
- <input id="email" name="email" type="email" autocomplete="email" required />
- </div>
- <div>
- <label for="message">Message</label>
- <textarea id="message" name="message" required placeholder="A few lines is enough — context, what decision is coming, and what you want to de-risk."></textarea>
- </div>
- <button class="cta" type="submit">Send</button>
- <p>
- Prefer email? <a href="mailto:hello@crestlinepartners.com.au">hello@crestlinepartners.com.au</a>
- </p>
- </form>
- </div>
+            <hr class="rule" />
 
- <div class="card">
- <div class="pill"><i></i> Good fit</div>
- <ul class="clean">
- <li><span class="tick"></span><span>Capital decisions with board or investor visibility.</span></li>
- <li><span class="tick"></span><span>Hybrid or BESS platforms being specified or procured.</span></li>
- <li><span class="tick"></span><span>Fleet-scale deployment where failure carries material cost.</span></li>
- </ul>
+            <div class="badge">
+              <span class="badge__dot" aria-hidden="true"></span>
+              <span class="badge__text">LOCATION</span>
+            </div>
+            <p class="muted">Australia (Brisbane). Supporting AU/NZ and APAC engagements.</p>
+          </aside>
+        </div>
 
- <div class="rule"></div>
-
- <div class="pill"><i></i> Location</div>
- <p class="p-small">
- Australia (Brisbane). Supporting AU/NZ and APAC engagements.
- </p>
- </div>
- </div>
- </div>
- </section>
-
- </main>
-
- <footer>
- <div class="wrap footer-inner">
- <div>
- <div class="footer-brand">Crestline Partners</div>
- <div>Practical clarity for complex problems</div>
- </div>
- <div class="footer-right">
- <div>© <span id="y"></span> Crestline Partners</div>
- <div><a href="#top">Back to top</a></div>
- </div>
- </div>
- </footer>
-
- <script>
- // tiny enhancement only
- document.getElementById("y").textContent = new Date().getFullYear();
- </script>
+        <footer class="site-footer">
+          <div>© 2026 Crestline Partners</div>
+        </footer>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
