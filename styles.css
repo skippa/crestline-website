@@ -10,7 +10,7 @@
   --shadow:0 16px 34px rgba(11,12,14,.10);
   --shadow-soft:0 10px 22px rgba(11,12,14,.08);
 
-  --accent:#ffd400;
+  --accent:#ffff00;
   --accent-ink:#101113;
 
   /* Slightly sharper geometry across the site */
@@ -69,7 +69,7 @@ a:hover{ text-decoration:underline; text-underline-offset:3px; }
 }
 .brand{ display:flex; align-items:center; gap:10px; }
 .brand__logo{
-  height:44px;   /* bigger logo */
+  height: 80px;   /* bigger logo */
   width:auto;
 }
 
