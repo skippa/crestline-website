@@ -284,15 +284,13 @@
     statusEl.classList.toggle("is-success", !!ok);
   };
 
-  // If you *do* land here via a redirect (kept for compatibility)
+  // Show success state after Netlify redirect
   if (new URLSearchParams(window.location.search).get("submitted") === "1") {
     setStatus("Thanks — message sent. I’ll reply soon.", true);
   }
 
-  const encode = (formData) => new URLSearchParams(formData).toString();
-
-  form.addEventListener("submit", async (e) => {
-    // Local (file://) fallback: open a mail draft instead of POSTing nowhere
+  form.addEventListener("submit", (e) => {
+    // Local (file://) fallback: open a mail draft
     if (window.location.protocol === "file:") {
       e.preventDefault();
 
@@ -321,32 +319,8 @@ ${message}`;
       return;
     }
 
-    // Netlify submit (AJAX) — works on deployed site and shows a visible result
-    e.preventDefault();
-
-    try {
-      setStatus("Sending…");
-
-      const fd = new FormData(form);
-      // Netlify expects the form-name field (you already have it, this keeps it safe)
-      if (!fd.get("form-name")) fd.set("form-name", form.getAttribute("name") || "contact");
-
-      const res = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode(fd),
-      });
-
-      if (!res.ok) throw new Error("Network response was not ok");
-
-      form.reset();
-      setStatus("Thanks — message sent. I’ll reply soon.", true);
-
-      // Optional: keep URL clean (no redirect needed)
-      history.replaceState(null, "", "#contact");
-    } catch (err) {
-      setStatus("Something didn’t send. Please email craig@crestlinepartners.net");
-    }
+    // IMPORTANT: on Netlify (https), do NOT preventDefault.
+    // Let the browser POST normally so Netlify handles the form reliably.
   });
 })();
 </script>
