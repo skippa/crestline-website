@@ -356,6 +356,25 @@ h2{
   font-weight: 800;
 }
 
+/* Make Deployment Reality kicker match the badge language (dot + label) */
+.card--wide .card__kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px; /* match .badge spacing */
+}
+
+.card--wide .card__kicker::before{
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 6px rgba(242,194,0,0.16); /* same as .badge__dot */
+}
+
+
+
 /* Rules */
 .rule{
   height: 1px;
