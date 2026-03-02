@@ -531,6 +531,26 @@ h2{
   .profile__img{
     width: 180px;
   }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.15;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .hero .kicker {
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 16px 18px;
+  }
 }
 
 
