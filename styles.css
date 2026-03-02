@@ -30,7 +30,7 @@
   --shadow-sm: 0 8px 20px rgba(15,17,21,0.08);
   --shadow-md: 0 12px 30px rgba(15,17,21,0.10);
 
-  --header-h: 76px; /* used for scroll offsets */
+  --header-h: 96px; /* used for scroll offsets */
 }
 
 /* Base */
