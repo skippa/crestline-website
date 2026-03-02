@@ -22,10 +22,10 @@
   --max: 1120px;
 
   /* Radii (tight, not “fintech”) */
-  --r-xs: 6px;
-  --r-sm: 10px;
-  --r-md: 12px;
-  --r-lg: 14px;
+  --r-xs: 4px;
+  --r-sm: 7px;
+  --r-md: 9px;
+  --r-lg: 11px;
 
   --shadow-sm: 0 8px 20px rgba(15,17,21,0.08);
   --shadow-md: 0 12px 30px rgba(15,17,21,0.10);
