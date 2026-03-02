@@ -538,8 +538,7 @@ h2{
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-areas:
-      "brand cta"
-      "links links";
+      "brand cta";
     align-items: center;
     gap: 10px 12px;
     padding: 10px 0; /* gives the logo/tagline breathing room */
