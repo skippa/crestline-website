@@ -548,9 +548,9 @@ h2{
   .brand{ grid-area: brand; min-width: 0; }
   /* Constrain the horizontal logo so it never collides with the CTA */
   .brand__logo{
-    height: 60px;                 /* bump from 52px → 60px */
+    height: 68px;                 /* bump from 52px → 60px */
     width: auto;
-    max-width: calc(100vw - 160px); /* leave safe space for Contact */
+    max-width: calc(100vw - 150px); /* leave safe space for Contact */
     display: block;
     object-fit: contain;
   }
