@@ -537,12 +537,12 @@ h2{
     line-height: 1.15;
   }
 
-  .hero p {
+  .hero__subhead {
     font-size: 1.1rem;
     line-height: 1.5;
   }
 
-  .hero .kicker {
+  .eyebrow {
     font-size: 0.85rem;
     letter-spacing: 0.06em;
   }
@@ -552,8 +552,8 @@ h2{
     padding: 16px 18px;
   }
 
-  body {
-    font-size: 16.5px;
+  html {
+    font-size: 17px;
   }
 
   h2 {
