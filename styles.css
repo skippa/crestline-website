@@ -148,6 +148,9 @@ a:hover{ text-decoration: none; }
   border-color: rgba(15,17,21,0.18);
   box-shadow: 0 10px 26px rgba(242,194,0,0.18);
 }
+
+.hero .btn--primary{ color:#111; }
+
 .btn--primary:hover{
   background: var(--accent-hover);
   transform: translateY(-1px);
