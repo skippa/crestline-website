@@ -549,3 +549,53 @@ h2{
     margin-left: auto;       /* keeps Contact pushed right on its row */
   }
 }
+
+/* MOBILE HEADER FIX */
+@media (max-width: 520px){
+
+  /* stop any tiny overflow */
+  html, body { overflow-x: hidden; }
+
+  /* make header content a 2-row layout:
+     row 1 = logo left, Contact right
+     row 2 = links */
+  .nav{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand cta"
+      "links links";
+    align-items: center;
+    gap: 10px 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .brand{
+    grid-area: brand;
+    min-width: 0;                 /* critical */
+  }
+
+  /* shrink logo on mobile so it never gets cropped */
+  .brand img{
+    height: 56px;                 /* tune: 52–60 */
+    width: auto;
+  }
+
+  .nav__links{
+    grid-area: links;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: flex-start;
+  }
+
+  /* ensure Contact stays top-right, not floating in the middle/left */
+  .nav__links .btn--nav{
+    grid-area: cta;
+    justify-self: end;
+    align-self: center;
+    margin: 0;                    /* kills any previous auto margins */
+  }
+}
