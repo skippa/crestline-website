@@ -211,8 +211,11 @@
         <p class="lede">If a decision needs to be defensible — commercially and technically — reach out. You’ll get a considered reply (not a sales funnel).</p>
 
         <div class="grid grid--2 grid--contact">
-          <form class="card form" name="contact" method="POST" data-netlify="true">
+          <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?submitted=1#contact">
             <input type="hidden" name="form-name" value="contact" />
+
+            <input name="bot-field" style="display:none" tabindex="-1" autocomplete="off" />
+            <div id="contact-status" class="form__status" aria-live="polite"></div>
 
             <label class="field">
               <span class="field__label">NAME</span>
@@ -267,5 +270,87 @@
       </div>
     </section>
   </main>
+
+<script>
+(() => {
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+
+  const statusEl = document.getElementById("contact-status");
+
+  const setStatus = (msg, ok = false) => {
+    if (!statusEl) return;
+    statusEl.textContent = msg;
+    statusEl.classList.toggle("is-success", !!ok);
+  };
+
+  // If you *do* land here via a redirect (kept for compatibility)
+  if (new URLSearchParams(window.location.search).get("submitted") === "1") {
+    setStatus("Thanks — message sent. I’ll reply soon.", true);
+  }
+
+  const encode = (formData) => new URLSearchParams(formData).toString();
+
+  form.addEventListener("submit", async (e) => {
+    // Local (file://) fallback: open a mail draft instead of POSTing nowhere
+    if (window.location.protocol === "file:") {
+      e.preventDefault();
+
+      const fd = new FormData(form);
+      const name = (fd.get("name") || "").toString().trim();
+      const company = (fd.get("company") || "").toString().trim();
+      const email = (fd.get("email") || "").toString().trim();
+      const message = (fd.get("message") || "").toString().trim();
+
+      const subject = "Crestline enquiry";
+      const body =
+`Name: ${name}
+Company: ${company}
+Email: ${email}
+
+Message:
+${message}`;
+
+      setStatus("Opening your email client…");
+
+      window.location.href =
+        "mailto:craig@crestlinepartners.net"
+        + "?subject=" + encodeURIComponent(subject)
+        + "&body=" + encodeURIComponent(body);
+
+      return;
+    }
+
+    // Netlify submit (AJAX) — works on deployed site and shows a visible result
+    e.preventDefault();
+
+    try {
+      setStatus("Sending…");
+
+      const fd = new FormData(form);
+      // Netlify expects the form-name field (you already have it, this keeps it safe)
+      if (!fd.get("form-name")) fd.set("form-name", form.getAttribute("name") || "contact");
+
+      const res = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(fd),
+      });
+
+      if (!res.ok) throw new Error("Network response was not ok");
+
+      form.reset();
+      setStatus("Thanks — message sent. I’ll reply soon.", true);
+
+      // Optional: keep URL clean (no redirect needed)
+      history.replaceState(null, "", "#contact");
+    } catch (err) {
+      setStatus("Something didn’t send. Please email craig@crestlinepartners.net");
+    }
+  });
+})();
+</script>
+
+
 </body>
 </html>

@@ -455,6 +455,16 @@ h2{
 }
 .form__hint a:hover{ text-decoration-color: rgba(15,17,21,0.55); }
 
+
+.form__status{
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.form__status.is-success{
+  color: #0a7a3b;
+}
+
 /* Footer */
 .site-footer{
   margin-top: 34px;
