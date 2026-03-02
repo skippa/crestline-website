@@ -571,6 +571,20 @@ h2{
     padding: 22px;
   }
 
+  /* tighten mobile readability (override fixed px sizes) */
+.lede{
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.pill__kicker{
+  font-size: 12px; /* was 11px */
+}
+
+.pill__body{
+  font-size: 15px; /* was 13px */
+  line-height: 1.6;
+}
 
 }
 
@@ -632,4 +646,12 @@ h2{
 
   /* Mobile scroll offsets: header is effectively taller (2 rows) */
   :root{ --header-h: 124px; }
+
+  .lede{
+  font-size: 18px;
+}
+
+.pill__body{
+  font-size: 16px;
+}
 }
