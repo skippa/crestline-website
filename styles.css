@@ -523,43 +523,18 @@ h2{
   }
 }
 
-/* Mobile: prevent horizontal overflow + let header wrap cleanly */
-@media (max-width: 720px){
-  html, body{
-    overflow-x: hidden;
-  }
 
-  .nav{
-    flex-wrap: wrap;
-    gap: 10px;
-  }
 
-  .brand{
-    min-width: 0;            /* was 240px, causes mobile overflow */
-  }
 
-  .nav__links{
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 12px;
-  }
-
-  .nav__links .btn--nav{
-    margin-left: auto;       /* keeps Contact pushed right on its row */
-  }
-}
-
-/* MOBILE HEADER FIX */
+/* MOBILE HEADER FIX (clean + matches current HTML structure) */
 @media (max-width: 520px){
 
-  /* stop any tiny overflow */
   html, body { overflow-x: hidden; }
 
-  /* make header content a 2-row layout:
-     row 1 = logo left, Contact right
-     row 2 = links */
-  .nav{
+  /* Make sticky header a clean 2-row layout:
+     Row 1: logo left, Contact right
+     Row 2: nav links (optional) */
+  .site-header .nav{
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-areas:
@@ -567,20 +542,11 @@ h2{
       "links links";
     align-items: center;
     gap: 10px 12px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0; /* gives the logo/tagline breathing room */
   }
 
-  .brand{
-    grid-area: brand;
-    min-width: 0;                 /* critical */
-  }
-
-  /* shrink logo on mobile so it never gets cropped */
-  .brand img{
-    height: 56px;                 /* tune: 52–60 */
-    width: auto;
-  }
+  .brand{ grid-area: brand; min-width: 0; }
+  .brand img{ height: 56px; width: auto; }
 
   .nav__links{
     grid-area: links;
@@ -591,11 +557,14 @@ h2{
     justify-content: flex-start;
   }
 
-  /* ensure Contact stays top-right, not floating in the middle/left */
-  .nav__links .btn--nav{
+  /* IMPORTANT: Contact is a sibling of .nav__links, not inside it */
+  .btn--nav{
     grid-area: cta;
     justify-self: end;
     align-self: center;
-    margin: 0;                    /* kills any previous auto margins */
+    margin: 0;
   }
+
+  /* Mobile scroll offsets: header is effectively taller (2 rows) */
+  :root{ --header-h: 124px; }
 }
