@@ -574,6 +574,11 @@ h2{
     margin: 0;
   }
 
+  /* Mobile: Deployment Reality diagram is too wide — hide it */
+  #deployment-reality .section-media{
+    display: none !important;
+  }
+
   /* Mobile scroll offsets: header is effectively taller (2 rows) */
   :root{ --header-h: 124px; }
 }
