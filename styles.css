@@ -522,3 +522,30 @@ h2{
     width: 180px;
   }
 }
+
+/* Mobile: prevent horizontal overflow + let header wrap cleanly */
+@media (max-width: 720px){
+  html, body{
+    overflow-x: hidden;
+  }
+
+  .nav{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .brand{
+    min-width: 0;            /* was 240px, causes mobile overflow */
+  }
+
+  .nav__links{
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .nav__links .btn--nav{
+    margin-left: auto;       /* keeps Contact pushed right on its row */
+  }
+}
