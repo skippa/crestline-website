@@ -495,3 +495,15 @@ h2{
   margin: 0 auto;     /* centres it */
 }
 
+/* Leadership profile image */
+.profile-media{
+  margin-bottom: 16px;
+}
+
+.profile-media img{
+  display: block;
+  width: 220px;
+  height: auto;
+  border-radius: var(--r-md);
+}
+
