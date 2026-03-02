@@ -566,15 +566,7 @@ h2{
     font-size: 12px;
   }
 
-  .nav__links{
-    grid-area: links;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    justify-content: flex-start;
-  }
-
+  
   /* IMPORTANT: Contact is a sibling of .nav__links, not inside it */
   .btn--nav{
     grid-area: cta;
