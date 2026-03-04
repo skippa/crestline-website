@@ -333,6 +333,71 @@ h2{
 .muted{ color: var(--muted); }
 .tagline{ margin-top: 14px; font-weight: 800; }
 
+/* Trust / testimonials */
+
+.trust-logos{
+  display:flex;
+  gap:24px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin:18px 0;
+  opacity:0.75;
+}
+
+.trust-logos img{
+  height:34px;
+  width:auto;
+  display:block;
+}
+
+.logo-aps{
+  height:30px;
+}
+
+.trust-grid{
+  margin-top:12px;
+}
+
+.trust-quote blockquote{
+  margin:0 0 14px;
+  color:var(--muted);
+  font-size:0.95rem;
+  line-height:1.6;
+}
+
+.trust-quote figcaption{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+
+.trust-name{
+  font-weight:800;
+  color:var(--text);
+  font-size:0.8rem;
+}
+
+.trust-role{
+  color:var(--muted);
+  font-size:0.8rem;
+}
+
+@media (max-width:520px){
+
+  .trust-logos{
+    gap:18px;
+  }
+
+  .trust-logos img{
+    height:30px;
+  }
+
+}
+
+
+
+
+
 /* Badges (no pill vibes) */
 .badge{
   display:inline-flex;
