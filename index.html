@@ -313,6 +313,9 @@
   // Show success state after Netlify redirect
   if (new URLSearchParams(window.location.search).get("submitted") === "1") {
     setStatus("Thanks — message sent. I’ll reply soon.", true);
+    if (typeof gtag === "function") {
+      gtag("event", "contact_submit");
+    }
   }
 
   form.addEventListener("submit", (e) => {
@@ -351,6 +354,37 @@ ${message}`;
 })();
 </script>
 
+<script>
+(() => {
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("a[href]");
+    if (!link || typeof gtag !== "function") return;
+
+    const href = link.getAttribute("href") || "";
+
+    if (href.startsWith("mailto:")) {
+      gtag("event", "email_click");
+    } else if (href.startsWith("tel:")) {
+      gtag("event", "phone_click");
+    }
+  });
+
+  const section = document.getElementById("deployment-reality");
+  if (!section || typeof IntersectionObserver !== "function") return;
+
+  const observer = new IntersectionObserver((entries) => {
+    if (!entries.some((entry) => entry.isIntersecting)) return;
+
+    if (typeof gtag === "function") {
+      gtag("event", "read_deployment_reality");
+    }
+
+    observer.disconnect();
+  }, { threshold: 0.5 });
+
+  observer.observe(section);
+})();
+</script>
 
 </body>
 </html>
