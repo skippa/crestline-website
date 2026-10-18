@@ -343,7 +343,7 @@ h2{
 }
 
 .trust-logo{
-  height: 26px;
+  height: 32px;
   width: auto;
   display: block;
   opacity: 0.55;       /* muted, but not ghosted */
@@ -351,15 +351,15 @@ h2{
 }
 
 .trust-logo--aps{
-  height: 22px;        /* APS mark runs long; slightly shorter keeps balance */
+  height: 28px;        /* APS mark runs long; slightly shorter keeps balance */
 }
 
 .trust-logo--jp{
-  height: 28px;
+  height: 34px;
 }
 
 .trust-logo--cranepower{
-  height: 34px;
+  height: 43px;
 }
 
 .trust-quote{
@@ -395,10 +395,10 @@ h2{
 }
 
 @media (max-width: 720px){
-  .trust-logo{ height: 24px; }
-  .trust-logo--aps{ height: 20px; }
-  .trust-logo--jp{ height: 26px; }
-  .trust-logo--cranepower{ height: 31px; }
+  .trust-logo{ height: 30px; }
+  .trust-logo--aps{ height: 26px; }
+  .trust-logo--jp{ height: 32px; }
+  .trust-logo--cranepower{ height: 40px; }
   .trust-quote{ font-size: 1rem; } /* a touch easier to read on mobile */
 }
 
