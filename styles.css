@@ -354,6 +354,14 @@ h2{
   height: 22px;        /* APS mark runs long; slightly shorter keeps balance */
 }
 
+.trust-logo--jp{
+  height: 28px;
+}
+
+.trust-logo--cranepower{
+  height: 34px;
+}
+
 .trust-quote{
   margin: 0 0 14px;
   font-size: 0.95rem;
@@ -389,6 +397,8 @@ h2{
 @media (max-width: 720px){
   .trust-logo{ height: 24px; }
   .trust-logo--aps{ height: 20px; }
+  .trust-logo--jp{ height: 26px; }
+  .trust-logo--cranepower{ height: 31px; }
   .trust-quote{ font-size: 1rem; } /* a touch easier to read on mobile */
 }
 
