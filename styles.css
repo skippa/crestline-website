@@ -342,12 +342,16 @@ h2{
   padding-top: 22px; /* a touch more breathing room above logo */
 }
 
+.trust-logo-slot{
+  height: 43px;
+  margin-bottom: 14px;
+}
+
 .trust-logo{
   height: 32px;
   width: auto;
   display: block;
   opacity: 0.55;       /* muted, but not ghosted */
-  margin-bottom: 14px;
 }
 
 .trust-logo--aps{
