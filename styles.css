@@ -358,6 +358,17 @@ h2{
   object-fit: contain;
 }
 
+.trust-logo-slot--pair .trust-logo--cranepower{
+  width: 146px;
+  height: auto;
+  aspect-ratio: 3.4;
+  object-fit: cover; /* Crop transparent vertical padding only. */
+}
+
+.trust-logo-slot--pair .trust-logo--jp{
+  height: 30px;
+}
+
 .trust-logo{
   height: 32px;
   width: auto;
@@ -407,6 +418,8 @@ h2{
   .trust-logo--aps{ height: 26px; }
   .trust-logo--jp{ height: 32px; }
   .trust-logo--cranepower{ height: 40px; }
+  .trust-logo-slot--pair .trust-logo--cranepower{ width: 136px; }
+  .trust-logo-slot--pair .trust-logo--jp{ height: 28px; }
   .trust-quote{ font-size: 1rem; } /* a touch easier to read on mobile */
 }
 
