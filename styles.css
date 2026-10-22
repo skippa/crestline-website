@@ -347,6 +347,17 @@ h2{
   margin-bottom: 14px;
 }
 
+.trust-logo-slot--pair{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.trust-logo-slot--pair .trust-logo{
+  min-width: 0;
+  object-fit: contain;
+}
+
 .trust-logo{
   height: 32px;
   width: auto;
@@ -389,13 +400,6 @@ h2{
 .trust-role{
   font-size: 0.8rem;
   color: var(--muted);
-}
-
-.trust-note{
-  margin-top: 4px;
-  font-size: 0.7rem;
-  color: var(--muted);
-  opacity: 0.7;
 }
 
 @media (max-width: 720px){
