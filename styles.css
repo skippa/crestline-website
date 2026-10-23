@@ -342,16 +342,50 @@ h2{
   padding-top: 22px; /* a touch more breathing room above logo */
 }
 
-.trust-logo{
-  height: 26px;
-  width: auto;
-  display: block;
-  opacity: 0.55;       /* muted, but not ghosted */
+.trust-logo-slot{
+  height: 43px;
   margin-bottom: 14px;
 }
 
+.trust-logo-slot--pair{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.trust-logo-slot--pair .trust-logo{
+  min-width: 0;
+  object-fit: contain;
+}
+
+.trust-logo-slot--pair .trust-logo--cranepower{
+  width: 146px;
+  height: auto;
+  aspect-ratio: 3.4;
+  object-fit: cover; /* Crop transparent vertical padding only. */
+}
+
+.trust-logo-slot--pair .trust-logo--jp{
+  height: 30px;
+}
+
+.trust-logo{
+  height: 32px;
+  width: auto;
+  display: block;
+  opacity: 0.55;       /* muted, but not ghosted */
+}
+
 .trust-logo--aps{
-  height: 22px;        /* APS mark runs long; slightly shorter keeps balance */
+  height: 28px;        /* APS mark runs long; slightly shorter keeps balance */
+}
+
+.trust-logo--jp{
+  height: 34px;
+}
+
+.trust-logo--cranepower{
+  height: 43px;
 }
 
 .trust-quote{
@@ -380,8 +414,12 @@ h2{
 }
 
 @media (max-width: 720px){
-  .trust-logo{ height: 24px; }
-  .trust-logo--aps{ height: 20px; }
+  .trust-logo{ height: 30px; }
+  .trust-logo--aps{ height: 26px; }
+  .trust-logo--jp{ height: 32px; }
+  .trust-logo--cranepower{ height: 40px; }
+  .trust-logo-slot--pair .trust-logo--cranepower{ width: 136px; }
+  .trust-logo-slot--pair .trust-logo--jp{ height: 28px; }
   .trust-quote{ font-size: 1rem; } /* a touch easier to read on mobile */
 }
 
